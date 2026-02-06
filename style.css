@@ -171,7 +171,7 @@ header {
 #settings {
     background: rgba(255, 255, 255, 0.1);
     border: 0;
-    color: white;
+    color: red;
     font-size: 1.2rem;
     cursor: pointer;
     padding: 0.75rem;
@@ -180,7 +180,7 @@ header {
     width: 44px;
     height: 44px;
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     backdrop-filter: blur(20px);
 }
@@ -314,7 +314,7 @@ main {
 
 .zone-header {
     background: var(--gradient-primary);
-    color: white;
+    color: blue;
     padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
@@ -617,4 +617,5 @@ footer {
     box-shadow: none;
 
 }
+
 
