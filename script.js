@@ -42,6 +42,7 @@ async function listZones() {
         }
         const response = await fetch(zonesURL+"?t="+Date.now());
         const json = await response.json();
+        zones = [0];
         zones = json;
         
         await fetchPopularity();
@@ -684,5 +685,6 @@ HTMLCanvasElement.prototype.toDataURL = function (...args) {
     return "";
 
 };
+
 
 
