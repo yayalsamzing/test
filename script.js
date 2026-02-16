@@ -650,7 +650,15 @@ function loadDMCA() {
     popupBody.contentEditable = false;
     document.getElementById('popupOverlay').style.display = "flex";
 }
-
+function showContact() {
+    document.getElementById('popupTitle').textContent = "Contact";
+    const popupBody = document.getElementById('popupBody');
+    popupBody.innerHTML = `
+    <p>Discord: https://discord.gg/NAFw4ykZ7n</p>
+    <p>Email: gn.math.business@gmail.com</p>`;
+    popupBody.contentEditable = false;
+    document.getElementById('popupOverlay').style.display = "flex";
+}
 function closePopup() {
     document.getElementById('popupOverlay').style.display = "none";
 }
@@ -685,6 +693,7 @@ HTMLCanvasElement.prototype.toDataURL = function (...args) {
     return "";
 
 };
+
 
 
 
