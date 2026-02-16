@@ -45,9 +45,8 @@ async function listZones() {
         }
         const response = await fetch(zonesURL+"?t="+Date.now());
         const json = await response.json();
-        zones[0].featured = true; // always gonna be the discord
         zones = json;
-        
+        zones[0].featured = true; // always gonna be the discord
         await fetchPopularity();
         sortZones();
         const search = new URLSearchParams(window.location.search);
@@ -572,7 +571,7 @@ settings.addEventListener('click', () => {
     document.getElementById('popupTitle').textContent = "Settings";
     const popupBody = document.getElementById('popupBody');
     popupBody.innerHTML = `
-    <button id="settings-button" onclick="darkMode()">Toggle Green Mode</button>
+    <button id="settings-button" onclick="darkMode()">Toggle Dark Mode</button>
     <br><br>
     <button id="settings-button" onclick="tabCloak()">Tab Cloak</button>
     <br>
@@ -581,7 +580,14 @@ settings.addEventListener('click', () => {
     document.getElementById('popupOverlay').style.display = "flex";
 });
 
-
+function showContact() {
+    document.getElementById('popupTitle').textContent = "Contact";
+    const popupBody = document.getElementById('popupBody');
+    popupBody.innerHTML = `
+    <p>Discord: https://discord.gg/NAFw4ykZ7n</p>
+    <p>Email: gn.math.business@gmail.com</p>`;
+    popupBody.contentEditable = false;
+    document.getElementById('popupOverlay').style.display = "flex";
 }
 
 function loadPrivacy() {
@@ -653,15 +659,7 @@ function loadDMCA() {
     popupBody.contentEditable = false;
     document.getElementById('popupOverlay').style.display = "flex";
 }
-function showContact() {
-    document.getElementById('popupTitle').textContent = "Contact";
-    const popupBody = document.getElementById('popupBody');
-    popupBody.innerHTML = `
-    <p>Discord: https://discord.gg/NAFw4ykZ7n</p>
-    <p>Email: gn.math.business@gmail.com</p>`;
-    popupBody.contentEditable = false;
-    document.getElementById('popupOverlay').style.display = "flex";
-}
+
 function closePopup() {
     document.getElementById('popupOverlay').style.display = "none";
 }
@@ -694,11 +692,4 @@ XMLHttpRequest.prototype.open = function (method, url) {
 
 HTMLCanvasElement.prototype.toDataURL = function (...args) {
     return "";
-
 };
-
-
-
-
-
-
