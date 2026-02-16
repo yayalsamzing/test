@@ -568,7 +568,7 @@ settings.addEventListener('click', () => {
     document.getElementById('popupTitle').textContent = "Settings";
     const popupBody = document.getElementById('popupBody');
     popupBody.innerHTML = `
-    <button id="settings-button" onclick="darkMode()">Toggle Dark Mode</button>
+    <button id="settings-button" onclick="darkMode()">Toggle Green Mode</button>
     <br><br>
     <button id="settings-button" onclick="tabCloak()">Tab Cloak</button>
     <br>
@@ -577,14 +577,7 @@ settings.addEventListener('click', () => {
     document.getElementById('popupOverlay').style.display = "flex";
 });
 
-function showContact() {
-    document.getElementById('popupTitle').textContent = "Contact";
-    const popupBody = document.getElementById('popupBody');
-    popupBody.innerHTML = `
-    <p>Discord: https://discord.gg/NAFw4ykZ7n</p>
-    <p>Email: gn.math.business@gmail.com</p>`;
-    popupBody.contentEditable = false;
-    document.getElementById('popupOverlay').style.display = "flex";
+
 }
 
 function loadPrivacy() {
@@ -691,3 +684,4 @@ HTMLCanvasElement.prototype.toDataURL = function (...args) {
     return "";
 
 };
+
